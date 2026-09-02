@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guia de campo · Workshop 1 · Jornada AI Native</title>
-<meta name="description" content="Arquivos do case e exercícios das duas fases do Workshop 1 da Jornada AI Native.">
+<title>Treinamento 1 · Jornada AI Native</title>
+<meta name="description" content="Arquivos do case e exercícios das duas fases do Treinamento 1 da Jornada AI Native.">
 <style>
 :root {
   --ink: #221a3a;
@@ -244,7 +244,7 @@ ul.checks input:checked + span { color: var(--muted); text-decoration: line-thro
 
 <header class="topbar">
   <button class="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false">☰ Sumário</button>
-  <div class="brand">Jornada AI Native <small>Workshop 1 · Guia de campo</small></div>
+  <div class="brand">Jornada AI Native <small>Treinamento 1</small></div>
   <div class="progress" aria-live="polite"><span id="progress-label">0/9 etapas</span><div><i id="progress-bar"></i></div></div>
 </header>
 
@@ -282,7 +282,7 @@ ul.checks input:checked + span { color: var(--muted); text-decoration: line-thro
 
       <!-- ============ INÍCIO ============ -->
       <section class="step" id="inicio" data-short="Início" data-loc="Início" data-title="Como usar este guia">
-        <div class="step-meta"><span class="kicker">Workshop 1 · Duas fases</span></div>
+        <div class="step-meta"><span class="kicker">Treinamento 1 · Duas fases</span></div>
         <h1>Do arquivo bagunçado ao painel de gestão</h1>
         <p class="lead">Primeira fase: cinco exercícios no Claude Cowork com a cobrança da Vértice. Segunda fase: o dossiê, a discussão em duplas e a Atividade 06. Este guia traz os arquivos, o que fazer e os prompts. A teoria fica nos slides.</p>
 
@@ -881,7 +881,7 @@ Não proponha soluções ainda. Só os fatos.</pre>
           <button class="done" type="button" aria-pressed="false">○ Marcar como concluído</button>
           <nav class="pn"><a href="#exercicio-6">← Em duplas</a><a class="next" href="#inicio">Voltar ao início →</a></nav>
         </footer>
-        <div class="page-foot"><span>Workshop 1 · Guia de campo</span><span>Case fictício para fins educacionais</span></div>
+        <div class="page-foot"><span>Treinamento 1</span><span>Case fictício para fins educacionais</span></div>
       </section>
 
 
@@ -967,7 +967,7 @@ Não proponha soluções ainda. Só os fatos.</pre>
     stepLinks.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === '#' + id));
     window.scrollTo(0, 0);
     const h = document.querySelector('#' + id + ' h1, #' + id + ' h2');
-    document.title = (h ? h.textContent + ' · ' : '') + 'Guia de campo · Workshop 1';
+    document.title = (h ? h.textContent + ' · ' : '') + 'Treinamento 1';
   }
   function go(id) {
     show(id);
