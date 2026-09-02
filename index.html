@@ -920,7 +920,7 @@ Não proponha soluções ainda. Só os fatos.</pre>
             <ol class="steps">
               <li><strong>Repensem o Excel.</strong> Estamos registrando tudo o que precisamos monitorar? Cada decisão tem regra, evidência, status e próxima ação? Os KPIs saem daqui? Anotem o que falta.</li>
               <li><strong>Repensem a Skill.</strong> Está claro o que ela decide sozinha e quando para e pede ajuda? Ela cita a regra que usou? Anotem o que falta.</li>
-              <li><strong>Refaçam o HTML.</strong> Colem no prompt abaixo as respostas das quatro perguntas e peçam o painel de gestão e revisão: fila por tratamento, casos esperando humano com o motivo, KPIs.</li>
+              <li><strong>Refaçam o HTML.</strong> Escrevam o pedido a partir das respostas das quatro perguntas e peçam o painel de gestão e revisão. O que ele mostra e como, quem define é a dupla.</li>
               <li>Abram e leiam como a gestora: dá pra fazer a gestão do que ocorreu e entender o dia? As ações que precisam de um humano estão claras? Ajustem.</li>
             </ol>
           </div>
@@ -929,27 +929,9 @@ Não proponha soluções ainda. Só os fatos.</pre>
             <p><strong>O HTML como painel de gestão e revisão humana.</strong> Nada inventado: o que o Excel ainda não registra fica em branco. O que faltar no Excel e na Skill fica anotado como próximo passo.</p>
           </div>
         </div>
-
-        <div class="prompt">
-          <div class="prompt-head"><span class="label">Prompt sugerido</span><strong>Refazer o HTML como painel de gestão e revisão</strong><button class="copy" type="button">Copiar</button></div>
-<pre>Use 03_saida/carteira-consolidada.xlsx do case Vértice e o que a nossa dupla decidiu:
-
-SISTEMA: [transformar ___ em ___, preservando ___]
-AÇÕES POSSÍVEIS (tratamentos): [lista]
-O QUE PASSA POR REVISÃO HUMANA E COM QUE REGRA: [lista de regras com limites]
-KPIs: [tarefa / processo / sistema]
-
-Crie 03_saida/html/painel-gestao.html, um painel de gestão e revisão humana da IA, lido do Excel atual (não altere o carteira.html):
-1. Fila por tratamento: cada ação possível vira um filtro.
-2. Casos esperando revisão humana, com o motivo e a regra de cada um.
-3. KPIs nos três níveis: tarefa, processo, sistema.
-4. Para cada decisão: regra aplicada, evidência, status e próxima ação.
-
-Não invente dado: o que o Excel ainda não registra fica em branco no painel.
-No fim, liste as colunas que o Excel precisaria ganhar e o que a Skill precisaria passar a registrar para o painel ficar completo.
-Preserve os 23 clientes.
-
-Mostre a estrutura do painel antes de gerar o arquivo.</pre>
+        <div class="block callout amber">
+          <h3>Este não tem prompt</h3>
+          <p>Vocês precisam definir e iterar. O que a dupla decidiu nas quatro perguntas é o briefing do painel: sistema, ações possíveis, o que passa por revisão humana e com que regra, KPIs. Escrevam o pedido com isso, gerem <code>03_saida/html/painel-gestao.html</code> a partir do Excel, olhem como a gestora e peçam de novo. Quantas vezes precisar.</p>
         </div>
 
         <div class="block card">
