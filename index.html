@@ -258,8 +258,8 @@ ul.checks input:checked + span { color: var(--muted); text-decoration: line-thro
       <p class="group">Primeira fase · exercícios</p>
       <a href="#fase" data-loc="Primeira fase"><span class="n">—</span><span>Visão geral</span><span class="ck">✓</span></a>
       <a href="#exercicio-1" data-loc="Exercício 01 · Organizar"><span class="n">01</span><span>Organizar</span><span class="ck">✓</span></a>
-      <a href="#exercicio-2" data-loc="Exercício 02 · Estruturar"><span class="n">02</span><span>Estruturar</span><span class="ck">✓</span></a>
-      <a href="#exercicio-3" data-loc="Exercício 03 · Triar"><span class="n">03</span><span>Triar</span><span class="ck">✓</span></a>
+      <a href="#exercicio-2" data-loc="Exercício 02 · Triar"><span class="n">02</span><span>Triar</span><span class="ck">✓</span></a>
+      <a href="#exercicio-3" data-loc="Exercício 03 · Estruturar"><span class="n">03</span><span>Estruturar</span><span class="ck">✓</span></a>
       <a href="#exercicio-4" data-loc="Exercício 04 · Conectar"><span class="n">04</span><span>Conectar</span><span class="ck">✓</span></a>
       <a href="#exercicio-5" data-loc="Exercício 05 · Agendar"><span class="n">05</span><span>Agendar</span><span class="ck">✓</span></a>
       <p class="group">Segunda fase · o processo</p>
@@ -358,8 +358,8 @@ ul.checks input:checked + span { color: var(--muted); text-decoration: line-thro
         <div class="block">
           <ol class="steps">
             <li><a href="#exercicio-1"><strong>Organizar</strong></a> · pastas + leitura de documentos</li>
-            <li><a href="#exercicio-2"><strong>Estruturar</strong></a> · Excel + artefato HTML</li>
-            <li><a href="#exercicio-3"><strong>Triar</strong></a> · critérios + Skill v0</li>
+            <li><a href="#exercicio-2"><strong>Triar</strong></a> · Excel + critérios + Skill v0</li>
+            <li><a href="#exercicio-3"><strong>Estruturar</strong></a> · artefato HTML com a fila de ações</li>
             <li><a href="#exercicio-4"><strong>Conectar</strong></a> · Gmail + reutilização da Skill</li>
             <li><a href="#exercicio-5"><strong>Agendar</strong></a> · Schedule + automação</li>
           </ol>
@@ -426,111 +426,52 @@ Ao final, resuma por cliente: quais documentos existem e o que ficou para revis�
       </section>
 
       <!-- ============ EXERCÍCIO 2 ============ -->
-      <section class="step exercise" id="exercicio-2" data-short="Ex. 02" data-loc="Exercício 02 · Estruturar" data-title="Da pasta à visão da carteira" data-track>
-        <div class="step-meta"><span class="kicker">Exercício 02 de 05</span><span class="tag">Excel + artefato</span></div>
-        <h2>Estruturar: da pasta à visão da carteira</h2>
-
-        <div class="block callout">
-          <h3>Situação</h3>
-          <p>Os documentos estão organizados. Agora precisamos enxergar os vinte clientes, seus dados e as evidências em um lugar pesquisável e verificável.</p>
-        </div>
-
-        <div class="two-col">
-          <div class="block card">
-            <h3>O que fazer</h3>
-            <ol class="steps">
-              <li>Use os dois CSVs e os documentos já organizados.</li>
-              <li>Combine as fontes em um Excel com uma linha por cliente.</li>
-              <li>Abra o arquivo e revise colunas, valores e fontes.</li>
-              <li>Crie uma visão HTML filtrável que reflita os mesmos dados.</li>
-              <li>Peça ajustes de visual, filtros e leitura até a visão ficar útil.</li>
-            </ol>
-          </div>
-          <div class="block callout green">
-            <h3>Entrega</h3>
-            <p>Um Excel consolidado e um HTML filtrável da carteira. Nenhuma decisão de cobrança ainda.</p>
-          </div>
-        </div>
-
-        <div class="prompt">
-          <div class="prompt-head"><span class="label">Prompt sugerido</span><strong>Consolidar sem decidir</strong><button class="copy" type="button">Copiar</button></div>
-<pre>Use estas fontes do case Vértice:
-- 01_entrada_0830/posicao_0830.csv (a posição de faturas)
-- 01_entrada_0830/clientes-final-v3.csv (o cadastro)
-- 02_area_de_trabalho/01_documentos_organizados e o inventario.md
-
-Crie:
-1. 03_saida/carteira-consolidada.xlsx, com uma linha por cliente (são 20). Esse Excel é a fonte de verdade: tudo que aparecer em qualquer HTML sai dele.
-2. 03_saida/html/carteira.html, lido do Excel, com filtros e uma visão gerencial dos mesmos dados.
-
-Colunas mínimas do Excel: id_cliente, cliente, segmento, gerente_conta, cliente_desde, fatura, valor_planilha, vencimento_planilha, dias_de_atraso, status_sistema, documentos_encontrados, valor_no_documento, comprovante (sim/não/parcial, com data e valor), negociação_registrada, contrato (prazo, se houver), divergências, arquivo_de_origem.
-
-Regras:
-- Registre fatos e evidências. Não invente dado para preencher lacuna: célula vazia é melhor que chute.
-- Se duas fontes discordam (valor, data, referência), registre as duas na coluna divergências.
-- Ainda não classifique quem deve ou não ser cobrado.
-
-Antes de criar os arquivos, mostre as colunas e os filtros que pretende usar. Depois de eu aprovar, gere o Excel, depois o HTML a partir dele.</pre>
-        </div>
-
-        <div class="block card">
-          <h3>Antes de avançar</h3>
-          <ul class="checks">
-            <li><label><input type="checkbox" data-check="exercicio-2:0"><span>Excel e HTML mostram os mesmos 20 clientes.</span></label></li>
-            <li><label><input type="checkbox" data-check="exercicio-2:1"><span>Cada fato relevante aponta para uma fonte.</span></label></li>
-            <li><label><input type="checkbox" data-check="exercicio-2:2"><span>Divergências aparecem como divergências.</span></label></li>
-          </ul>
-        </div>
-
-        <footer class="step-foot">
-          <button class="done" type="button" aria-pressed="false">○ Marcar como concluído</button>
-          <nav class="pn"><a href="#exercicio-1">← Exercício 01</a><a class="next" href="#exercicio-3">Exercício 03 →</a></nav>
-        </footer>
-      </section>
-
-      <!-- ============ EXERCÍCIO 3 ============ -->
-      <section class="step exercise" id="exercicio-3" data-short="Ex. 03" data-loc="Exercício 03 · Triar" data-title="Quem devemos cobrar?" data-track>
-        <div class="step-meta"><span class="kicker">Exercício 03 de 05</span><span class="tag">Critérios + Skill</span></div>
+      <section class="step exercise" id="exercicio-2" data-short="Ex. 02" data-loc="Exercício 02 · Triar" data-title="Quem devemos cobrar?" data-track>
+        <div class="step-meta"><span class="kicker">Exercício 02 de 05</span><span class="tag">Excel + critérios + Skill</span></div>
         <h2>Triar: quem devemos cobrar?</h2>
 
         <div class="block callout">
           <h3>Situação</h3>
-          <p>A liderança enviou uma orientação simples. Agora você precisa aplicá-la aos vinte clientes, revisar as decisões e transformar o que funcionou em uma receita reutilizável.</p>
+          <p>Os documentos estão organizados. Agora precisamos juntar planilha, cadastro e documentos numa base só, e aplicar a orientação que a liderança mandou aos vinte clientes. Depois, o que funcionou vira uma receita reutilizável.</p>
         </div>
 
         <div class="two-col">
           <div class="block card">
             <h3>O que fazer</h3>
             <ol class="steps">
-              <li>Abra uma nova tarefa e dê acesso à pasta do case.</li>
-              <li>Use a orientação da liderança para classificar os 20 clientes.</li>
-              <li>Revise justificativas, evidências e pedidos de informação.</li>
+              <li>No mesmo chat, use os dois CSVs e os documentos organizados.</li>
+              <li>Peça um Excel com uma linha por cliente: primeiro os fatos e as evidências, depois a decisão pela regra da Paula.</li>
+              <li>Revise a tabela antes de gravar: justificativas, evidências, pedidos de informação.</li>
               <li>Dê feedback até o procedimento ficar consistente.</li>
               <li>Transforme o procedimento aprovado em uma Skill v0.</li>
             </ol>
           </div>
           <div class="block callout green">
             <h3>Entrega</h3>
-            <p>Vinte clientes classificados em Cobrar, Não cobrar ou Falta informação + uma Skill v0 de triagem.</p>
+            <p>Um Excel consolidado com os 20 clientes classificados em Cobrar, Não cobrar ou Falta informação, cada um com justificativa e evidência, mais uma Skill v0 de triagem.</p>
           </div>
         </div>
 
         <div class="prompt">
-          <div class="prompt-head"><span class="label">Prompt A</span><strong>Aplicar os critérios</strong><button class="copy" type="button">Copiar</button></div>
-<pre>Leia 00_briefing/02_recado_da_lideranca.txt e use só essa orientação para classificar os 20 clientes de 03_saida/carteira-consolidada.xlsx em um de três grupos:
-- Cobrar
-- Não cobrar
-- Falta informação
+          <div class="prompt-head"><span class="label">Prompt A</span><strong>Consolidar e aplicar os critérios</strong><button class="copy" type="button">Copiar</button></div>
+<pre>Use estas fontes do case Vértice:
+- 01_entrada_0830/posicao_0830.csv (a posição de faturas)
+- 01_entrada_0830/clientes-final-v3.csv (o cadastro)
+- 02_area_de_trabalho/01_documentos_organizados e o inventario.md
+- 00_briefing/02_recado_da_lideranca.txt (a regra da Paula)
 
-Para cada cliente, registre:
-1. A classificação.
-2. Uma justificativa curta, em uma frase.
-3. A evidência e o arquivo usados.
-4. O que falta, quando não for possível decidir.
+Crie 03_saida/carteira-consolidada.xlsx, com uma linha por cliente (são 20). Esse Excel é a fonte de verdade: tudo que aparecer em qualquer HTML sai dele.
 
-Não invente para fechar a fila. Se as fontes discordarem, se o documento estiver incompleto ou se não der pra entender o caso, use "Falta informação".
+Primeiro, as colunas de fato: id_cliente, cliente, segmento, gerente_conta, cliente_desde, fatura, valor_planilha, vencimento_planilha, dias_de_atraso, status_sistema, documentos_encontrados, valor_no_documento, comprovante (sim/não/parcial, com data e valor), negociação_registrada, contrato (prazo, se houver), divergências, arquivo_de_origem.
 
-Primeiro me mostre a tabela com as 20 decisões para eu revisar. Só depois da minha aprovação, acrescente as colunas classificacao, justificativa, evidencia e falta_o_que ao Excel e regere 03_saida/html/carteira.html a partir dele. Não apague nenhuma coluna existente.</pre>
+Depois, só com a regra da Paula, as colunas de decisão: classificacao (Cobrar, Não cobrar ou Falta informação), justificativa (uma frase), evidencia (o arquivo usado), falta_o_que.
+
+Regras:
+- Registre fatos e evidências. Não invente dado para preencher lacuna: célula vazia é melhor que chute.
+- Se duas fontes discordam (valor, data, referência), registre as duas em divergências e use "Falta informação".
+- Não invente para fechar a fila.
+
+Antes de gravar o arquivo, me mostre a tabela completa para eu revisar. Depois da minha aprovação, gere o Excel.</pre>
         </div>
 
         <div class="prompt">
@@ -542,7 +483,7 @@ A Skill deve:
 2. Aplicar exatamente os critérios do recado da liderança.
 3. Classificar em Cobrar, Não cobrar ou Falta informação.
 4. Registrar justificativa, evidência e informação faltante.
-5. Acrescentar o cliente ao Excel em 03_saida sem apagar nem alterar registros anteriores, e regerar o HTML a partir do Excel.
+5. Acrescentar o cliente ao Excel em 03_saida sem apagar nem alterar registros anteriores, e regerar os HTMLs que existirem a partir do Excel.
 6. Parar e pedir ajuda quando as fontes discordarem ou não forem suficientes.
 7. Nunca enviar uma cobrança nem responder um e-mail.
 
@@ -552,9 +493,63 @@ O arquivo da Skill deve ter: quando usar, inputs necessários, passo a passo, ou
         <div class="block card">
           <h3>Antes de avançar</h3>
           <ul class="checks">
-            <li><label><input type="checkbox" data-check="exercicio-3:0"><span>Toda decisão tem justificativa e evidência.</span></label></li>
-            <li><label><input type="checkbox" data-check="exercicio-3:1"><span>Falta de dados não virou palpite.</span></label></li>
-            <li><label><input type="checkbox" data-check="exercicio-3:2"><span>A Skill descreve inputs, outputs, limites e exceções.</span></label></li>
+            <li><label><input type="checkbox" data-check="exercicio-2:0"><span>O Excel tem os 20 clientes, e cada fato aponta para uma fonte.</span></label></li>
+            <li><label><input type="checkbox" data-check="exercicio-2:1"><span>Toda decisão tem justificativa e evidência. Falta de dados não virou palpite.</span></label></li>
+            <li><label><input type="checkbox" data-check="exercicio-2:2"><span>Divergências aparecem como divergências.</span></label></li>
+            <li><label><input type="checkbox" data-check="exercicio-2:3"><span>A Skill descreve inputs, outputs, limites e exceções.</span></label></li>
+          </ul>
+        </div>
+
+        <footer class="step-foot">
+          <button class="done" type="button" aria-pressed="false">○ Marcar como concluído</button>
+          <nav class="pn"><a href="#exercicio-1">← Exercício 01</a><a class="next" href="#exercicio-3">Exercício 03 →</a></nav>
+        </footer>
+      </section>
+      <!-- ============ EXERCÍCIO 3 ============ -->
+      <section class="step exercise" id="exercicio-3" data-short="Ex. 03" data-loc="Exercício 03 · Estruturar" data-title="Da planilha à fila de ações" data-track>
+        <div class="step-meta"><span class="kicker">Exercício 03 de 05</span><span class="tag">Artefato HTML</span></div>
+        <h2>Estruturar: da planilha à fila de ações</h2>
+
+        <div class="block callout">
+          <h3>Situação</h3>
+          <p>O Excel tem os 20 clientes, as evidências e as decisões. Agora precisamos de uma tela que a analista e a gestora consigam usar: a fila do dia, o que vai ser cobrado, o que está travado e por quê.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="block card">
+            <h3>O que fazer</h3>
+            <ol class="steps">
+              <li>Peça um HTML lido do Excel, com a fila separada por decisão.</li>
+              <li>Abra o arquivo e leia como a gestora: dá pra entender o dia em um minuto?</li>
+              <li>Peça ajustes de visual, filtros, gráficos e leitura até a tela ficar útil.</li>
+              <li>Se discordar de alguma decisão, corrija no Excel e regere o HTML. Nunca edite o HTML direto.</li>
+            </ol>
+          </div>
+          <div class="block callout green">
+            <h3>Entrega</h3>
+            <p>Um HTML filtrável da fila de cobrança, espelho do Excel, que mostra o que fazer com cada cliente e por quê.</p>
+          </div>
+        </div>
+
+        <div class="prompt">
+          <div class="prompt-head"><span class="label">Prompt sugerido</span><strong>A fila do dia em uma tela</strong><button class="copy" type="button">Copiar</button></div>
+<pre>Leia 03_saida/carteira-consolidada.xlsx e crie 03_saida/html/carteira.html, uma visão gerencial da fila de cobrança. O Excel é a fonte: nenhum número, cliente ou decisão que não esteja nele.
+
+A tela precisa ter:
+1. Um resumo no topo: quantos clientes em Cobrar, Não cobrar e Falta informação, e o valor total de cada grupo.
+2. A fila completa, com filtro por classificação, por gerente de conta e por faixa de atraso.
+3. Para cada cliente: classificação, justificativa, evidência (o arquivo) e o que falta, quando faltar.
+4. Os casos em Falta informação em destaque, porque são os que precisam de uma pessoa.
+
+Use gráficos onde ajudarem a leitura, não por enfeite. Antes de gerar o arquivo, mostre a estrutura da tela e os filtros que pretende usar. Depois de eu aprovar, gere o HTML.</pre>
+        </div>
+
+        <div class="block card">
+          <h3>Antes de avançar</h3>
+          <ul class="checks">
+            <li><label><input type="checkbox" data-check="exercicio-3:0"><span>Excel e HTML mostram os mesmos 20 clientes e as mesmas decisões.</span></label></li>
+            <li><label><input type="checkbox" data-check="exercicio-3:1"><span>Dá pra ver, sem abrir caso por caso, o que precisa de uma pessoa.</span></label></li>
+            <li><label><input type="checkbox" data-check="exercicio-3:2"><span>Pelo menos um ajuste foi pedido e refeito a partir do Excel.</span></label></li>
           </ul>
         </div>
 
@@ -563,7 +558,6 @@ O arquivo da Skill deve ter: quando usar, inputs necessários, passo a passo, ou
           <nav class="pn"><a href="#exercicio-2">← Exercício 02</a><a class="next" href="#exercicio-4">Exercício 04 →</a></nav>
         </footer>
       </section>
-
       <!-- ============ EXERCÍCIO 4 ============ -->
       <section class="step exercise" id="exercicio-4" data-short="Ex. 04" data-loc="Exercício 04 · Conectar" data-title="Chegaram três novos casos" data-track>
         <div class="step-meta"><span class="kicker">Exercício 04 de 05</span><span class="tag">Gmail + reutilização</span></div>
