@@ -462,16 +462,14 @@ Ao final, resuma por cliente: quais documentos existem e o que ficou para revis�
 
 Crie 03_saida/carteira-consolidada.xlsx, com uma linha por cliente (são 20). Esse Excel é a fonte de verdade: tudo que aparecer em qualquer HTML sai dele.
 
-Primeiro, as colunas de fato: id_cliente, cliente, segmento, gerente_conta, cliente_desde, fatura, valor_planilha, vencimento_planilha, dias_de_atraso, status_sistema, documentos_encontrados, valor_no_documento, comprovante (sim/não/parcial, com data e valor), negociação_registrada, contrato (prazo, se houver), divergências, arquivo_de_origem.
-
-Depois, só com a regra da Paula, as colunas de decisão: classificacao (Cobrar, Não cobrar ou Falta informação), justificativa (uma frase), evidencia (o arquivo usado), falta_o_que.
+Separe o Excel em duas partes: primeiro o que é fato (o que a planilha, o cadastro e os documentos dizem sobre cada cliente), depois o que é decisão pela regra da Paula (Cobrar, Não cobrar ou Falta informação, com uma justificativa curta, a evidência usada e o que falta quando não der pra decidir). Quais colunas entram em cada parte, decida você e me proponha antes de criar o arquivo.
 
 Regras:
 - Registre fatos e evidências. Não invente dado para preencher lacuna: célula vazia é melhor que chute.
 - Se duas fontes discordam (valor, data, referência), registre as duas em divergências e use "Falta informação".
 - Não invente para fechar a fila.
 
-Antes de gravar o arquivo, me mostre a tabela completa para eu revisar. Depois da minha aprovação, gere o Excel.</pre>
+Antes de gravar o arquivo, me mostre as colunas que você escolheu e a tabela completa para eu revisar. Depois da minha aprovação, gere o Excel.</pre>
         </div>
 
         <div class="prompt">
